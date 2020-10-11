@@ -411,6 +411,29 @@
             <use href="./images/sprite.svg#icon-close-modal"></use>
           </svg>
         </a>
+
+        <!-- Speaker Form -->
+        <form class="js-speaker-form">
+          <label for="name">Имя</label>
+          <input type="text" name="user-name" id="name" />
+
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
+
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" />
+
+          <label for="comment">Комментарий</label>
+          <textarea name="comment" rows="8" placeholder="Введите текст"></textarea>
+
+          <input type="checkbox" name="accept" value="accept" id="accept" />
+          <label for="accept"
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </label>
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
@@ -418,5 +441,7 @@
     <script src="./js/fixheader.js"></script>
     <!--Modal-->
     <script src="./js/modal.js"></script>
+    <!-- Speaker Form -->
+    <script src="./js/speakerform.js"></script>
   </body>
 </html>

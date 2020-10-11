@@ -7,7 +7,7 @@
   --accent-color: rgb(33, 150, 243);
   --icon-color: #afb1b8;
   --white-color: #ffffff;
-  --time: 250ms;
+  --time: 2500ms;
   --function-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------------------------------------*/
@@ -584,7 +584,8 @@ img {
 }
 /**/
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5) rotate(0);
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform var(--time) var(--function-time);
 }
 /*модальное окно*/
 .modal {
@@ -600,7 +601,7 @@ img {
   border-radius: 4px;
   background-color: #ffffff;
 
-  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transform: translate(-50%, -50%) scale(1);
 
   transition: transform var(--time) var(--function-time);
 }
@@ -627,7 +628,7 @@ img {
   fill: currentColor;
   transition: color var(--time) var(--function-time);
 }
-/*активное состояние закрития модального окна*/
+/*активное состояние иконки закрития модального окна*/
 .modal-link:hover .modal-icon,
 .modal-link:focus .modal-icon {
   color: var(--accent-color);
