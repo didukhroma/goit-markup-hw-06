@@ -7,7 +7,7 @@
   --accent-color: rgb(33, 150, 243);
   --icon-color: #afb1b8;
   --white-color: #ffffff;
-  --time: 2500ms;
+  --time: 250ms;
   --function-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------------------------------------------------*/
@@ -573,25 +573,26 @@ img {
   z-index: 1;
   opacity: 1;
   visibility: visible;
-  transition: all var(--time) var(--function-time);
-  overflow: scroll;
-}
+  transition: opacity var(--time) var(--function-time), visibility var(--time) var(--function-time);
+}/*спрятаний фон*/
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: all var(--time) var(--function-time);
+  transition: opacity var(--time) var(--function-time), visibility var(--time) var(--function-time);
 }
+/*модальное окно в спрятаном фоне*/
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(0turn);
-  transition: all var(--time) var(--function-time);
+  transition: transform var(--time) var(--function-time);
 }
+/*модальное окно*/
 .modal {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(1turn);
-  transition: all var(--time) var(--function-time);
+  transition: transform var(--time) var(--function-time);
 
   width: 528px;
   height: 580px;
