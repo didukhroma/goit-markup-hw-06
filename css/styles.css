@@ -4,7 +4,7 @@
   --secondary-font-family: "Raleway", sans-serif;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
-  --accent-color: rgb(33, 150, 243);
+  --accent-color: #2196f3;
   --icon-color: #afb1b8;
   --white-color: #ffffff;
   --time: 250ms;
@@ -676,14 +676,14 @@ img {
 .close-btn:focus .close-icon {
   fill: var(--accent-color);
 }
-/*form*/
+/*общая форма*/
 .modal-form {
   width: 100%;
   height: 100%;
 
   padding: 40px;
 }
-/**/
+/*слоган форми*/
 .form-slogan {
   display: block;
   font-weight: 700;
@@ -695,14 +695,14 @@ img {
 
   color: var(--primary-text-color);
 }
-/**/
+/*блок форми*/
 .form-field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-/**/
+/*описание форми*/
 .form-label {
   margin-bottom: 4px;
   font-weight: 400;
@@ -713,7 +713,7 @@ img {
 
   color: var(--secondary-text-color);
 }
-/**/
+/*Инпут форми*/
 .form-input {
   font-weight: 400;
   font-size: 12px;
@@ -728,6 +728,15 @@ img {
 
   color: var(--secondary-text-color);
 }
+/*Плейсхолдер инпута*/
+.form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+
+  letter-spacing: 0.01em;
+}
+/*ввод коментария*/
 .form-textarea {
   resize: none;
   overflow-y: scroll;
@@ -743,12 +752,13 @@ img {
 
   color: var(--secondary-text-color);
 }
-/**/
+
+/*нижний маржин блока коментариев*/
 .form-field.comment {
   margin-bottom: 20px;
 }
-/**/
-.form-input::placeholder {
+/*плейсхолдек блока коментариев*/
+.form-textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.143px;
@@ -756,12 +766,29 @@ img {
 
   color: rgba(117, 117, 117, 0.5);
 }
+/*иконка форми*/
 .form-icon {
   position: absolute;
   left: 12px;
   bottom: 12px;
   width: 18px;
   height: 18px;
+}
+/*фокус по форме заливка иконки*/
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+/*фокус по форме*/
+.form-input:focus,
+.form-textarea:focus {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  outline: transparent;
+}
+/*ховер по форме*/
+.form-input:hover,
+.form-textarea:hover {
+  cursor: pointer;
 }
 /**/
 .checkbox {
