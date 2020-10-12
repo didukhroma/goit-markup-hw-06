@@ -50,7 +50,7 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+          <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -400,6 +400,20 @@
             </li>
           </ul>
         </div>
+
+        <!-- Accept for mail -->
+        <div class="footer-input-mail">
+          <form class="footer-form js-speaker-form"></form>
+
+          <b class="footer-form-slogan">Подпишитесь на рассылку</b>
+
+          <div class="footer-form-field flexbox">
+            <label for="footer-mail">E-mail</label>
+            <input type="mail" name="mail" id="footer-mail" />
+
+            <button class="button" type="submit">Подписаться</button>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -413,26 +427,39 @@
         </button>
 
         <!-- Speaker Form-->
-        <form class="js-speaker-form">
-          <label for="name">Имя</label>
-          <input type="text" name="user-name" id="name" />
+        <form class="modal-form js-speaker-form">
+          <!--Slogan-->
+          <b class="form-slogan">Оставьте свои данные, мы вам перезвоним</b>
 
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel" />
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" name="user-name" id="name" />
+          </div>
 
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" />
+          <div class="form-field">
+            <label class="form-label" for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
 
-          <label for="comment">Комментарий</label>
-          <textarea name="comment" rows="8" placeholder="Введите текст"></textarea>
+          <div class="form-field">
+            <label class="form-label" for="mail">Почта</label>
+            <input type="email" name="mail" id="mail" />
+          </div>
 
-          <input type="checkbox" name="accept" value="accept" id="accept" />
-          <label for="accept"
-            >Соглашаюсь с рассылкой и принимаю
-            <a href="">Условия договора</a>
-          </label>
+          <div class="form-field comment">
+            <label class="form-label" for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+          </div>
 
-          <button type="submit">Отправить</button>
+          <div class="checkbox">
+            <input type="checkbox" name="accept" value="accept" id="accept" />
+            <label for="accept">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="contract" href="">Условия договора</a>
+            </label>
+          </div>
+
+          <button class="button" type="submit">Отправить</button>
         </form>
       </div>
     </div>

@@ -64,6 +64,37 @@ img {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+/*Кнопка*/
+.button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  min-width: 200px;
+
+  padding: 10px 32px;
+
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  letter-spacing: 0.06em;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+
+  transition: background-color var(--time) var(--function-time);
+}
+/*активное состояние кнопки*/
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: #188ce8;
+}
 /*======  END MAIN  ======*/
 /*----------------------------------------------------------*/
 /*======  HEADER  ======*/
@@ -207,35 +238,6 @@ img {
   text-transform: uppercase;
 
   color: var(--white-color);
-}
-/*Кнопка Hero*/
-.hero-button {
-  display: inline-flex;
-  border: 1px solid transparent;
-  border-radius: 4px;
-
-  min-width: 200px;
-
-  padding: 10px 32px;
-
-  font-family: var(--main-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-
-  letter-spacing: 0.06em;
-
-  color: var(--white-color);
-  background-color: var(--accent-color);
-
-  transition: background-color var(--time) var(--function-time);
-}
-/*активное состояние кнопки*/
-.hero-button:hover,
-.hero-button:focus {
-  cursor: pointer;
-  background-color: rgb(24, 140, 232);
 }
 /*======  END HERO  ======*/
 /*----------------------------------------------------------*/
@@ -529,6 +531,10 @@ img {
   max-width: 231px;
   margin-right: 70px;
 }
+/*маржин блока присоединяйтесь*/
+.footer-join {
+  margin-right: 93px;
+}
 /*стили присоединяйся*/
 .join {
   display: inline-flex;
@@ -557,6 +563,23 @@ img {
 .footer .container {
   align-items: baseline;
 }
+/*footer-form*/
+/**/
+.footer-form-slogan {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer-form-field .button {
+  padding-left: 28px;
+  padding-right: 28px;
+}
 /*======  END FOOTER  ======*/
 
 /*----------------------------------------------------------*/
@@ -574,7 +597,7 @@ img {
   opacity: 1;
   visibility: visible;
   transition: opacity var(--time) var(--function-time), visibility var(--time) var(--function-time);
-}/*спрятаний фон*/
+} /*спрятаний фон*/
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -595,8 +618,10 @@ img {
   transition: transform var(--time) var(--function-time);
 
   width: 528px;
-  height: 580px;
-  background-color: #fff;
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /*Закритие модального окна*/
@@ -627,6 +652,108 @@ img {
 .close-btn:hover .close-icon,
 .close-btn:focus .close-icon {
   fill: var(--accent-color);
+}
+/*form*/
+.modal-form {
+  width: 100%;
+  height: 100%;
+
+  padding: 40px;
+}
+/**/
+.form-slogan {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  margin-bottom: 12px;
+
+  color: var(--primary-text-color);
+}
+/**/
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+/**/
+.form-field label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+/**/
+.form-field input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+
+  letter-spacing: 0.01em;
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  color: var(--secondary-text-color);
+}
+.form-field textarea {
+  resize: none;
+  overflow-y: scroll;
+
+  height: 120px;
+  width: 100%;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  color: var(--secondary-text-color);
+}
+/**/
+.form-field.comment {
+  margin-bottom: 20px;
+}
+/**/
+.form-field input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.143px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+/**/
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.checkbox input {
+  margin-right: 7px;
+}
+/**/
+.checkbox label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+
+  color: var(--secondary-text-color);
+}
+.contract {
+  color: var(--accent-color);
+}
+.modal-form .button {
+  margin: 0 auto;
 }
 /*======  END MODAL WINDOW  ======*/
 
