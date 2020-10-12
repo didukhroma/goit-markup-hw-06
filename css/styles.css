@@ -567,53 +567,48 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
-
   width: 100%;
   height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
   opacity: 1;
-  transition: opacity var(--time) var(--function-time);
+  visibility: visible;
+  transition: all var(--time) var(--function-time);
+  overflow: scroll;
 }
-/*дополнительний клас для скривания фона*/
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: all var(--time) var(--function-time);
 }
-/**/
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: transform var(--time) var(--function-time);
+  transform: translate(-50%, -50%) scale(0) rotate(0turn);
+  transition: all var(--time) var(--function-time);
 }
-/*модальное окно*/
 .modal {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(1turn);
+  transition: all var(--time) var(--function-time);
 
-  padding: 8px;
   width: 528px;
-  height: 581px;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  background-color: #ffffff;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  transition: transform var(--time) var(--function-time);
+  height: 580px;
+  background-color: #fff;
 }
+
 /*Закритие модального окна*/
-.modal-link {
+.close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 30px;
   height: 30px;
   background: var(--white-color);
@@ -621,17 +616,16 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 /*иконка Закрития*/
-.modal-icon {
+.close-icon {
   width: 11px;
   height: 11px;
-  color: #000000;
-  fill: currentColor;
-  transition: color var(--time) var(--function-time);
+  fill: #000000;
+  transition: fill var(--time) var(--function-time);
 }
 /*активное состояние иконки закрития модального окна*/
-.modal-link:hover .modal-icon,
-.modal-link:focus .modal-icon {
-  color: var(--accent-color);
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
+  fill: var(--accent-color);
 }
 /*======  END MODAL WINDOW  ======*/
 

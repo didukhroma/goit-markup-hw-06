@@ -406,13 +406,13 @@
     <!--Modal window-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <a href="" class="modal-link link" aria-label="закритие модального окна" data-modal-close>
-          <svg class="modal-icon">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-icon">
             <use href="./images/sprite.svg#icon-close-modal"></use>
           </svg>
-        </a>
+        </button>
 
-        <!-- Speaker Form -->
+        <!-- Speaker Form-->
         <form class="js-speaker-form">
           <label for="name">Имя</label>
           <input type="text" name="user-name" id="name" />
@@ -441,7 +441,7 @@
     <script src="./js/fixheader.js"></script>
     <!--Modal-->
     <script src="./js/modal.js"></script>
-    <!-- Speaker Form -->
-    <script src="./js/speakerform.js"></script>
+    <!-- Speaker Form 
+    <script src="./js/speakerform.js"></script>-->
   </body>
 </html>
