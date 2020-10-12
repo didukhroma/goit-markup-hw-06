@@ -427,7 +427,6 @@ img {
 /*активное состояние соцсетей*/
 .social-link:hover,
 .social-link:focus {
-  outline: none;
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -476,7 +475,6 @@ img {
 .clients-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  outline: none;
 }
 /*======  END CLIENTS ======*/
 /*----------------------------------------------------------*/
@@ -557,7 +555,6 @@ img {
 /*активное состояние иконов соцсетей */
 .footer .social-link:hover,
 .footer .social-link:focus {
-  outline: none;
   background-color: var(--accent-color);
 }
 /*виравнивание */
@@ -700,12 +697,13 @@ img {
 }
 /**/
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 /**/
-.form-field label {
+.form-label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -716,7 +714,7 @@ img {
   color: var(--secondary-text-color);
 }
 /**/
-.form-field input {
+.form-input {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.167;
@@ -730,7 +728,7 @@ img {
 
   color: var(--secondary-text-color);
 }
-.form-field textarea {
+.form-textarea {
   resize: none;
   overflow-y: scroll;
 
@@ -750,13 +748,20 @@ img {
   margin-bottom: 20px;
 }
 /**/
-.form-field input::placeholder {
+.form-input::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.143px;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 18px;
+  height: 18px;
 }
 /**/
 .checkbox {
@@ -873,7 +878,6 @@ img {
 .portfolio-project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
-  outline: none;
 }
 
 /*позиционирование родителя*/

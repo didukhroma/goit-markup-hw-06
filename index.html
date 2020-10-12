@@ -403,20 +403,20 @@
 
         <!-- Accept for mail -->
         <div class="footer-input-mail">
-          <form class="footer-form js-speaker-form"></form>
+          <form class="footer-form js-speaker-form" autocomplete="off">
+            <b class="footer-form-slogan">Подпишитесь на рассылку</b>
 
-          <b class="footer-form-slogan">Подпишитесь на рассылку</b>
+            <div class="footer-form-field flexbox">
+              <input type="mail" name="mail" placeholder="E-mail" />
 
-          <div class="footer-form-field flexbox">
-            <input type="mail" name="mail" placeholder="E-mail" />
-
-            <button class="button" type="submit">
-              Подписаться
-              <svg class="form-icon-mail">
-                <use href="./images/sprite.svg#icon-form-send"></use>
-              </svg>
-            </button>
-          </div>
+              <button class="button" type="submit">
+                Подписаться
+                <svg class="form-icon-mail">
+                  <use href="./images/sprite.svg#icon-form-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -431,28 +431,43 @@
         </button>
 
         <!-- Speaker Form-->
-        <form class="modal-form js-speaker-form">
+        <form class="modal-form js-speaker-form" autocomplete="off">
           <!--Slogan-->
           <b class="form-slogan">Оставьте свои данные, мы вам перезвоним</b>
 
           <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="user-name" id="name" />
+            <label class="form-label" for="name">Имя</label>
+            <input class="form-input" type="text" name="user-name" id="name" />
+            <span>
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#icon-form-person"></use>
+              </svg>
+            </span>
           </div>
 
           <div class="form-field">
             <label class="form-label" for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+            <input class="form-input" type="tel" name="tel" id="tel" />
+            <span>
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#icon-form-phone"></use>
+              </svg>
+            </span>
           </div>
 
           <div class="form-field">
             <label class="form-label" for="mail">Почта</label>
-            <input type="email" name="mail" id="mail" />
+            <input class="form-input" type="email" name="mail" id="mail" />
+            <span>
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#icon-form-mail"></use>
+              </svg>
+            </span>
           </div>
 
           <div class="form-field comment">
             <label class="form-label" for="comment">Комментарий</label>
-            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+            <textarea class="form-textarea" name="comment" id="comment" placeholder="Введите текст"></textarea>
           </div>
 
           <div class="checkbox">
