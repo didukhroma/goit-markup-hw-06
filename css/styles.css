@@ -75,6 +75,7 @@ img {
   min-width: 200px;
 
   padding: 10px 32px;
+  margin: 0 auto;
 
   font-family: var(--main-font-family);
   font-style: normal;
@@ -528,7 +529,7 @@ img {
 }
 /*размери + отступи контактов*/
 .footer-contact {
-  max-width: 231px;
+  min-width: 231px;
   margin-right: 70px;
 }
 /*маржин блока присоединяйтесь*/
@@ -566,19 +567,44 @@ img {
 /*footer-form*/
 /**/
 .footer-form-slogan {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
+  display: flex;
+  margin-bottom: 20px;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  line-height: 1.143;
   text-transform: uppercase;
 
   color: #ffffff;
 }
+/**/
+.footer-form-field input {
+  padding: 15px 16px;
+  margin-right: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+
+  color: rgba(255, 255, 255, 0.6);
+}
 .footer-form-field .button {
   padding-left: 28px;
   padding-right: 28px;
+  align-items: center;
+}
+/**/
+.form-icon-mail {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 /*======  END FOOTER  ======*/
 
@@ -751,9 +777,6 @@ img {
 }
 .contract {
   color: var(--accent-color);
-}
-.modal-form .button {
-  margin: 0 auto;
 }
 /*======  END MODAL WINDOW  ======*/
 
