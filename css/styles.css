@@ -562,9 +562,13 @@ img {
   align-items: baseline;
 }
 /*footer-form*/
+.footer-input-mail {
+  flex-grow: 1;
+}
+/**/
 /**/
 .footer-form-slogan {
-  display: flex;
+  display: block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -574,23 +578,52 @@ img {
   color: #ffffff;
 }
 /**/
-.footer-form-field input {
-  padding: 15px 16px;
+.send-mail {
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
   margin-right: 12px;
+}
+/**/
+.footer-form-field .form-label,
+.footer-form-field .form-input,
+.footer-form-field .form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+/**/
+.footer-form-field .form-label {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  margin: 0;
+  padding: 16px 0;
+  height: 100%;
+  transition: color var(--time) var(--function-time);
+}
+/**/
+.footer-form-field .form-input {
+  padding: 15px 16px 15px 79px;
 
-  display: flex;
-  align-items: center;
+  width: 100%;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 
   background-color: transparent;
 
-  color: rgba(255, 255, 255, 0.6);
+  transition: border var(--time) var(--function-time);
+}
+/**/
+.form-input:focus ~ .form-label {
+  color: var(--accent-color);
+}
+.form-input:hover ~ .form-label {
+  cursor: pointer;
 }
 .footer-form-field .button {
   padding-left: 28px;
@@ -666,8 +699,8 @@ img {
 }
 /*иконка Закрития*/
 .close-icon {
-  width: 11px;
-  height: 11px;
+  width: 18px;
+  height: 18px;
   fill: #000000;
   transition: fill var(--time) var(--function-time);
 }

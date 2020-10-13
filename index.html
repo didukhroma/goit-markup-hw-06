@@ -403,11 +403,14 @@
 
         <!-- Accept for mail -->
         <div class="footer-input-mail">
-          <form class="footer-form js-speaker-form" autocomplete="off">
-            <b class="footer-form-slogan">Подпишитесь на рассылку</b>
+          <b class="footer-form-slogan">Подпишитесь на рассылку</b>
 
+          <form class="footer-form js-speaker-form" autocomplete="off">
             <div class="footer-form-field flexbox">
-              <input type="mail" name="mail" placeholder="E-mail" />
+              <div class="send-mail flexbox">
+                <input class="form-input" type="mail" name="mail" id="send-mail" placeholder="example@gmail.com" />
+                <label class="form-label" for="send-mail">E-mail</label>
+              </div>
 
               <button class="button" type="submit">
                 Подписаться
@@ -426,7 +429,7 @@
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
           <svg class="close-icon">
-            <use href="./images/sprite.svg#icon-close-modal"></use>
+            <use href="./images/sprite.svg#icon-form-close"></use>
           </svg>
         </button>
 
@@ -455,7 +458,7 @@
             <label class="form-label" for="mail">Почта</label>
             <input class="form-input" type="email" name="mail" id="mail" placeholder="mail@gmail.com" />
             <svg class="form-icon">
-              <use href="./images/sprite.svg#icon-form-mail"></use>
+              <use href="./images/sprite.svg#icon-form-email"></use>
             </svg>
           </div>
 
