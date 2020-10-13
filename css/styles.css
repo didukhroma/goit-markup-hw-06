@@ -565,8 +565,7 @@ img {
 .footer-input-mail {
   flex-grow: 1;
 }
-/**/
-/**/
+/*стилизация слогана*/
 .footer-form-slogan {
   display: block;
   margin-bottom: 20px;
@@ -577,14 +576,14 @@ img {
 
   color: #ffffff;
 }
-/**/
+/*отправка емейла*/
 .send-mail {
   position: relative;
   flex-grow: 1;
   align-items: center;
   margin-right: 12px;
 }
-/**/
+/*общие стили елементов форми*/
 .footer-form-field .form-label,
 .footer-form-field .form-input,
 .footer-form-field .form-input::placeholder {
@@ -594,17 +593,16 @@ img {
 
   color: rgba(255, 255, 255, 0.6);
 }
-/**/
+/*стидизация описания инпута*/
 .footer-form-field .form-label {
   position: absolute;
   left: 16px;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   margin: 0;
-  padding: 16px 0;
-  height: 100%;
   transition: color var(--time) var(--function-time);
 }
-/**/
+/*стилизация инпута*/
 .footer-form-field .form-input {
   padding: 15px 16px 15px 79px;
 
@@ -618,19 +616,21 @@ img {
 
   transition: border var(--time) var(--function-time);
 }
-/**/
+/*инпут в фокусе*/
 .form-input:focus ~ .form-label {
   color: var(--accent-color);
 }
+/*ховер по описанию*/
 .form-input:hover ~ .form-label {
   cursor: pointer;
 }
+/*кнопка подписатьса*/
 .footer-form-field .button {
   padding-left: 28px;
   padding-right: 28px;
   align-items: center;
 }
-/**/
+/*иконка кнопки*/
 .form-icon-mail {
   width: 24px;
   height: 24px;
@@ -662,7 +662,7 @@ img {
 }
 /*модальное окно в спрятаном фоне*/
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(0turn);
+  transform: translate(-50%, -50%) scale(0);
   transition: transform var(--time) var(--function-time);
 }
 /*модальное окно*/
@@ -670,7 +670,7 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(1turn);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform var(--time) var(--function-time);
 
   width: 528px;
