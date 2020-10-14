@@ -408,7 +408,7 @@
           <form class="footer-form js-speaker-form" autocomplete="off">
             <div class="footer-form-field flexbox">
               <div class="send-mail flexbox">
-                <input class="form-input" type="mail" name="mail" id="send-mail" placeholder="example@gmail.com" />
+                <input class="form-input footer-input" type="mail" name="mail" id="send-mail" placeholder="example@gmail.com" />
                 <label class="form-label" for="send-mail">E-mail</label>
               </div>
 
@@ -433,19 +433,17 @@
           </svg>
         </button>
 
-        <!--Slogan-->
-        <b class="form-slogan">Оставьте свои данные, мы вам перезвоним</b>
-
         <!-- Speaker Form-->
         <form class="modal-form js-speaker-form" autocomplete="off">
+          <!--Slogan-->
+          <b class="form-slogan">Оставьте свои данные, мы вам перезвоним</b>
+
           <div class="form-field">
-            <label class="form-label">
-              Имя
-              <input class="form-input" type="text" name="user-name" placeholder="Иван Ивановыч" />
-              <svg class="form-icon">
-                <use href="./images/sprite.svg#icon-form-person"></use>
-              </svg>
-            </label>
+            <label class="form-label" for="name">Имя</label>
+            <input class="form-input" type="text" name="user-name" id="name" placeholder="Иван Ивановыч" />
+            <svg class="form-icon">
+              <use href="./images/sprite.svg#icon-form-person"></use>
+            </svg>
           </div>
 
           <div class="form-field">
