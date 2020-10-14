@@ -467,12 +467,17 @@
             <textarea class="form-textarea" name="comment" id="comment" placeholder="Введите текст"></textarea>
           </div>
 
-          <div class="checkbox">
-            <input type="checkbox" name="accept" value="accept" id="accept" />
-            <label for="accept">
+          <div class="check">
+            <input class="check-input visually-hidden" type="checkbox" name="accept" value="accept" id="accept" />
+            <label class="check-label" for="accept">
               Соглашаюсь с рассылкой и принимаю
-              <a class="contract" href="">Условия договора</a>
+              <a class="contract link" href="">Условия договора</a>
             </label>
+            <div class="check-box">
+              <svg class="check-icon">
+                <use href="./images/sprite.svg#icon-form-vector"></use>
+              </svg>
+            </div>
           </div>
 
           <button class="button" type="submit">Отправить</button>

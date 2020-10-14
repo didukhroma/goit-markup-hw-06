@@ -650,7 +650,7 @@ img {
   margin-bottom: 20px;
 }
 /*плейсхолдек блока коментариев*/
-.form-textarea::placeholder {
+.textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.143px;
@@ -685,25 +685,71 @@ img {
 .form-textarea:hover {
   cursor: pointer;
 }
-/**/
-.checkbox {
+/*Чек блок*/
+.check {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
-.checkbox input {
-  margin-right: 7px;
-}
-/**/
-.checkbox label {
+/*описание чек-инпута*/
+.check-label {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
 
+  padding-left: 36px;
+
   color: var(--secondary-text-color);
 }
+/*чек-бокс*/
+.check-box {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  z-index: -1;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background-color var(--time) var(--function-time), border-color var(--time) var(--function-time);
+}
+/*иконка чек-бокса*/
+.check-icon {
+  width: 11px;
+  height: 8px;
+}
+/*состояние чекед*/
+.check-input:checked ~ .check-box {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+/*сщстояние фокуса*/
+.check-input:focus ~ .check-box {
+  border-color: var(--accent-color);
+}
+/*цвет текста договора*/
 .contract {
+  position: relative;
   color: var(--accent-color);
+}
+/*подчеркивание договора*/
+.contract::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
 }
 /*======  END MODAL WINDOW  ======*/
 
@@ -868,7 +914,7 @@ img {
   height: 24px;
   margin-left: 10px;
 }
-/**/
+/*плейсхолдек форми отправки емейла*/
 .footer-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
