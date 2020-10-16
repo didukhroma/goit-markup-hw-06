@@ -23,7 +23,7 @@
   /*outline: 1px solid tomato;*/
 }
 /*общие стили*/
-.body {
+.page-body {
   font-family: var(--main-font-family);
   letter-spacing: 0.03em;
   margin: 0 auto;
@@ -34,6 +34,7 @@
 }
 /*нижнее подчеркивание ссилок*/
 .link {
+  display: block;
   text-decoration: none;
 }
 /*центрирование контента*/
@@ -100,7 +101,7 @@ img {
 /*----------------------------------------------------------*/
 /*======  HEADER  ======*/
 /*хедер*/
-.header {
+.page-header {
   position: fixed;
   top: 0;
   left: 50%;
@@ -112,7 +113,7 @@ img {
   background-color: #ffffff;
 }
 /*линия*/
-.header::after {
+.page-header::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -121,16 +122,17 @@ img {
   width: 100%;
   border-bottom: 1px solid #ececec;
 }
-/*правий отступ для елементов списков*/
-.nav-list-item:not(:last-child),
-.header-contact-item:not(:last-child) {
-  margin-right: 50px;
+/*создание виравнивание навигации */
+.nav {
+  display: flex;
+  align-items: center;
 }
-/*Стилизация логотипа*/
+/*правий маржин навигации*/
+.page-header__nav {
+  margin-right: auto;
+}
 /*Логотип шрифт цвет*/
 .logo {
-  margin-right: 93px;
-
   font-family: var(--secondary-font-family);
   font-weight: 700;
   font-size: 26px;
@@ -139,12 +141,30 @@ img {
   color: var(--accent-color);
 }
 /*Цвет для текста логотипа в шапке*/
-.logo-text {
+.logo__text {
   color: #000000;
 }
+/*Цвет для текста логотипа в футере*/
+.logo__text--inverse {
+  color: #ffffff;
+}
+/*правий отступ логотипа*/
+.nav__logo {
+  margin-right: 93px;
+}
+/*флексконтейнер*/
+.site-nav,
+.contact {
+  display: flex;
+}
+/*правий отступ для елементов списков*/
+.site-nav__item:not(:last-child),
+.contact__item:not(:last-child) {
+  margin-right: 50px;
+}
 /*общие стили*/
-.nav-list-link,
-.header-contact-link {
+.site-nav__link,
+.contact__link {
   display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -159,29 +179,29 @@ img {
   transition: color var(--time) var(--function-time);
 }
 /*цвет текста контактов*/
-.header-contact-link {
+.contact__link {
   color: var(--secondary-text-color);
 }
 /*правий отступ + цвет иконок*/
-.contact-icon {
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 /*активное состояние елементов*/
-.nav-list-link:hover,
-.nav-list-link:focus,
-.header-contact-link:hover,
-.header-contact-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus,
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
 }
 
 /*текущая страница*/
-.nav-list-link.current {
+.site-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
 /*подчеркивание текущей ссилки*/
-.nav-list-link.current::after {
+.site-nav__link--current::after {
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -193,11 +213,7 @@ img {
   background: var(--accent-color);
   border-radius: 2px;
 }
-/*создание виравнивание навигации + правий маржин*/
-.nav {
-  align-items: center;
-  margin-right: auto;
-}
+
 /*======  END HEADER  ======*/
 /*----------------------------------------------------------*/
 /*======  MAIN  ======*/
@@ -752,10 +768,7 @@ img {
   padding-bottom: 60px;
 }
 /*паддинги + нижний маржин логотипа*/
-.footer .logo {
-  display: block;
-  padding: 0;
-  margin-right: 0;
+.footer__logo {
   margin-bottom: 20px;
 }
 /*нижний маржин елементов адреса*/
@@ -780,10 +793,7 @@ img {
 .address-map {
   color: #ffffff;
 }
-/*Цвет для текста логотипа в футере*/
-.footer .logo-text {
-  color: #ffffff;
-}
+
 /*активное состояние елементов*/
 .address-map:hover,
 .address-map:focus,

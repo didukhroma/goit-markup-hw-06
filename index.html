@@ -9,32 +9,32 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body class="body">
+  <body class="page-body">
     <!--Header site-->
-    <header class="header">
+    <header class="page-header">
       <div class="container flexbox">
-        <nav class="nav flexbox">
-          <a class="logo link" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo-text">Studio</span></a>
+        <nav class="nav page-header__nav">
+          <a class="logo link nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
 
-          <ul class="nav-list list flexbox">
-            <li class="nav-list-item"><a class="nav-list-link link current" href="./index.html">Студия</a></li>
-            <li class="nav-list-item"><a class="nav-list-link link" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav-list-item"><a class="nav-list-link link" href="">Контакты</a></li>
+          <ul class="list site-nav">
+            <li class="site-nav__item"><a class="link site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
+            <li class="site-nav__item"><a class="link site-nav__link" href="./portfolio.html">Портфолио</a></li>
+            <li class="site-nav__item"><a class="link site-nav__link" href="">Контакты</a></li>
           </ul>
         </nav>
 
-        <ul class="header-contact list flexbox">
-          <li class="header-contact-item">
-            <a class="header-contact-link link" href="mailto:info@devstudio.com">
-              <svg class="contact-icon" width="16" height="12">
+        <ul class="list contact">
+          <li class="contact__item">
+            <a class="contact__link link" href="mailto:info@devstudio.com">
+              <svg class="contact__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-mail"></use>
               </svg>
               <span lang="en">info@devstudio.com</span>
             </a>
           </li>
-          <li class="header-contact-item">
-            <a class="header-contact-link link" href="tel:+380961111111">
-              <svg class="contact-icon" width="10" height="16">
+          <li class="contact__item">
+            <a class="contact__link link" href="tel:+380961111111">
+              <svg class="contact__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -349,7 +349,7 @@
       <!-- Footer contact and map -->
       <div class="container flexbox">
         <div class="footer-contact">
-          <a class="logo link" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo-text">Studio</span> </a>
+          <a class="logo link footer__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text logo__text--inverse">Studio</span> </a>
 
           <address class="address">
             <ul class="address-list list">
@@ -484,7 +484,7 @@
     <script src="./js/fixheader.js"></script>
     <!--Modal-->
     <script src="./js/modal.js"></script>
-    <!-- Speaker Form 
-    <script src="./js/speakerform.js"></script>-->
+    <!-- Speaker Form -->
+    <script src="./js/speakerform.js"></script>
   </body>
 </html>
