@@ -50,7 +50,7 @@
       <section class="hero hero__overlay">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button" data-modal-open>Заказать услугу</button>
+          <button class="btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -346,6 +346,64 @@
       </section>
     </main>
 
+    <!--Modal window-->
+    <div class="backdrop backdrop--is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__btn" data-modal-close>
+          <svg class="modal__icon">
+            <use href="./images/sprite.svg#icon-form-close"></use>
+          </svg>
+        </button>
+
+        <!--Slogan-->
+        <b class="modal__slogan">Оставьте свои данные, мы вам перезвоним</b>
+
+        <!-- Speaker Form-->
+        <form action="#" class="site-form js-speaker-form" autocomplete="off">
+          <div class="site-form__wrapper">
+            <div class="site-form__field">
+              <label class="site-form__label" for="name">Имя</label>
+              <input class="site-form__input" type="text" name="user-name" id="name" placeholder="Иван Ивановыч" />
+              <svg class="site-form__icon">
+                <use href="./images/sprite.svg#icon-form-person"></use>
+              </svg>
+            </div>
+
+            <div class="site-form__field">
+              <label class="site-form__label" for="tel">Телефон</label>
+              <input class="site-form__input" type="tel" name="user-phone" id="tel" placeholder="+38 096 111 11 11" />
+              <svg class="site-form__icon">
+                <use href="./images/sprite.svg#icon-form-phone"></use>
+              </svg>
+            </div>
+
+            <div class="site-form__field">
+              <label class="site-form__label" for="mail">Почта</label>
+              <input class="site-form__input" type="email" name="user-mail" id="mail" placeholder="mail@gmail.com" />
+              <svg class="site-form__icon">
+                <use href="./images/sprite.svg#icon-form-email"></use>
+              </svg>
+            </div>
+
+            <div class="site-form__field">
+              <label class="site-form__label" for="comment">Комментарий</label>
+              <textarea class="site-form__textarea" name="user-comment" id="comment" placeholder="Введите текст"></textarea>
+            </div>
+          </div>
+
+          <div class="check">
+            <input class="visually-hidden check__input" type="checkbox" name="accept" value="accept" id="accept" />
+            <label class="check__label" for="accept">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="link check__link" href="">Условия договора</a>
+            </label>
+          </div>
+
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
     <!--Footer-->
     <footer class="footer">
       <!-- Footer contact and map -->
@@ -370,7 +428,7 @@
 
         <!-- Join to us -->
         <div class="join footer__join">
-          <b class="join__slogan">присоединяйтесь</b>
+          <b class="footer__slogan">присоединяйтесь</b>
           <ul class="list social">
             <li class="social__item">
               <a href="" class="link social__link join__link" aria-label="инстаграм вебстудии">
@@ -405,16 +463,16 @@
 
         <!-- Accept for mail -->
         <div class="accept footer__accept">
-          <b class="accept-slogan">Подпишитесь на рассылку</b>
+          <b class="footer__slogan">Подпишитесь на рассылку</b>
 
           <form action="#" class="js-speaker-form" autocomplete="off">
             <div class="flexbox">
               <div class="accept__field flexbox">
-                <input class="form__input accept__input" type="email" name="mail" id="send-mail" placeholder="example@gmail.com" />
-                <label class="form__label accept__label" for="send-mail">E-mail</label>
+                <input class="site-form__input accept__input" type="email" name="mail" id="send-mail" placeholder="example@gmail.com" />
+                <label class="site-form__label accept__label" for="send-mail">E-mail</label>
               </div>
 
-              <button class="button accept__button" type="submit">
+              <button class="btn accept__button" type="submit">
                 Подписаться
                 <svg class="accept__icon">
                   <use href="./images/sprite.svg#icon-form-send"></use>
@@ -425,62 +483,6 @@
         </div>
       </div>
     </footer>
-
-    <!--Modal window-->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="close-btn" data-modal-close>
-          <svg class="close-icon">
-            <use href="./images/sprite.svg#icon-form-close"></use>
-          </svg>
-        </button>
-
-        <!-- Speaker Form-->
-        <form action="#" class="modal-form js-speaker-form" autocomplete="off">
-          <!--Slogan-->
-          <b class="form-slogan">Оставьте свои данные, мы вам перезвоним</b>
-
-          <div class="form-field">
-            <label class="form__label" for="name">Имя</label>
-            <input class="form__input" type="text" name="user-name" id="name" placeholder="Иван Ивановыч" />
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#icon-form-person"></use>
-            </svg>
-          </div>
-
-          <div class="form-field">
-            <label class="form__label" for="tel">Телефон</label>
-            <input class="form__input" type="tel" name="user-phone" id="tel" placeholder="+38 096 111 11 11" />
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#icon-form-phone"></use>
-            </svg>
-          </div>
-
-          <div class="form-field">
-            <label class="form__label" for="mail">Почта</label>
-            <input class="form__input" type="email" name="user-mail" id="mail" placeholder="mail@gmail.com" />
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#icon-form-email"></use>
-            </svg>
-          </div>
-
-          <div class="form-field comment">
-            <label class="form__label" for="comment">Комментарий</label>
-            <textarea class="form-textarea" name="user-comment" id="comment" placeholder="Введите текст"></textarea>
-          </div>
-
-          <div class="check">
-            <input class="check-input visually-hidden" type="checkbox" name="accept" value="accept" id="accept" />
-            <label class="check-label" for="accept">
-              Соглашаюсь с рассылкой и принимаю
-              <a class="contract link" href="">Условия договора</a>
-            </label>
-          </div>
-
-          <button class="button" type="submit">Отправить</button>
-        </form>
-      </div>
-    </div>
 
     <!--Fix Header-->
     <script src="./js/fixheader.js"></script>
