@@ -363,7 +363,7 @@
           <div class="site-form__wrapper">
             <div class="site-form__field">
               <label class="site-form__label" for="name">Имя</label>
-              <input class="site-form__input" type="text" name="user-name" id="name" placeholder="Иван Ивановыч" />
+              <input class="site-form__input" type="text" name="user-name" id="name" placeholder="Иван Ивановыч *" required minlength="2" />
               <svg class="site-form__icon">
                 <use href="./images/sprite.svg#icon-form-person"></use>
               </svg>
@@ -371,7 +371,7 @@
 
             <div class="site-form__field">
               <label class="site-form__label" for="tel">Телефон</label>
-              <input class="site-form__input" type="tel" name="user-phone" id="tel" placeholder="+38 096 111 11 11" />
+              <input class="site-form__input" type="tel" name="user-phone" id="tel" placeholder="+38-096-111-11-11 *" required pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" />
               <svg class="site-form__icon">
                 <use href="./images/sprite.svg#icon-form-phone"></use>
               </svg>
@@ -379,7 +379,7 @@
 
             <div class="site-form__field">
               <label class="site-form__label" for="mail">Почта</label>
-              <input class="site-form__input" type="email" name="user-mail" id="mail" placeholder="mail@gmail.com" />
+              <input class="site-form__input" type="email" name="user-mail" id="mail" placeholder="mail@gmail.com *" required />
               <svg class="site-form__icon">
                 <use href="./images/sprite.svg#icon-form-email"></use>
               </svg>
@@ -468,7 +468,7 @@
           <form action="#" class="js-speaker-form" autocomplete="off">
             <div class="flexbox">
               <div class="accept__field flexbox">
-                <input class="site-form__input accept__input" type="email" name="mail" id="send-mail" placeholder="example@gmail.com" />
+                <input class="site-form__input accept__input" type="email" name="mail" value="accept-policy" id="send-mail" placeholder="example@gmail.com" />
                 <label class="site-form__label accept__label" for="send-mail">E-mail</label>
               </div>
 
@@ -488,7 +488,7 @@
     <script src="./js/fixheader.js"></script>
     <!--Modal-->
     <script src="./js/modal.js"></script>
-    <!-- Speaker Form -->
-    <script src="./js/speakerform.js"></script>
+    <!-- Speaker Form 
+    <script src="./js/speakerform.js"></script>-->
   </body>
 </html>

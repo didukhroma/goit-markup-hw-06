@@ -792,7 +792,7 @@
 }
 /*цвет текста договора*/
 .check__link {
-  display: inline-block;
+  display: inline;
   position: relative;
 
   color: var(--accent-color);
