@@ -107,6 +107,17 @@
             <path
                 d="M11.446 4.255A.917.917 0 0 1 13 4.901a.928.928 0 0 1-.242.649l-4.894 6.154a.921.921 0 0 1-1.019.229.918.918 0 0 1-.306-.204L3.293 8.466a.925.925 0 0 1-.226-1.024.925.925 0 0 1 .87-.578.916.916 0 0 1 .656.294L7.162 9.74l4.26-5.458a.311.311 0 0 1 .025-.027h-.001Z" />
         </symbol>
+        <symbol id="burger-menu" viewBox="0 0 32 32">
+            <g clip-path="url(#a)">
+                <path d="M1.348 20.043h29.538M1.348 10.735h29.538M1.348 1.428h29.538" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="a">
+                    <path fill="#fff" d="M0 0h32v22H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
 
     </defs>
 </svg>

@@ -22,8 +22,8 @@
   --hero-background-color: rgba(46, 47, 66, 0.7);
 
   /* size */
-  --desktop-width: 1158px;
-  --container-padding: 15px;
+  --container-width: 428px;
+  --container-padding: 16px;
   /* card-set */
   --indent-col: 24px;
   --indent-row: 24px;
@@ -31,6 +31,17 @@
   /* transition */
   --transition-time: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --container-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  :root {
+    --container-width: 1158px;
+    --container-padding: 15px;
+  }
 }
 
 /**
@@ -93,10 +104,11 @@ body {
 }
 /* CONTAINER */
 .container {
-  max-width: var(--desktop-width);
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
 /* SECTION */
 .section {
   padding: 120px 0;
