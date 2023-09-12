@@ -769,6 +769,17 @@ body {
 }
 /* ------------------------------------------------------------------------------------------------- */
 /* SERVICES */
+@media screen and (max-width: 1157px) {
+  .services {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .services {
+    display: block;
+  }
+}
 .services {
   padding-top: 0;
 }
