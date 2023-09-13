@@ -838,8 +838,36 @@ body {
 /* ------------------------------------------------------------------------------------------------- */
 /* CUSTOMERS */
 .customers-list {
-  --items: 6;
+  --indent-col: 16px;
+  --indent-row: 72px;
+  --items: 2;
 }
+
+@media screen and (min-width: 768px) {
+  .customers-list {
+    --indent-col: 24px;
+    --items: 3;
+  }
+  .customers-icon {
+    width: 104px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .customers-list {
+    --items: 6;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-list {
+    justify-content: center;
+  }
+  .customers-item {
+    max-width: 168px;
+  }
+}
+
 .customers-title {
   margin-bottom: 72px;
 }
