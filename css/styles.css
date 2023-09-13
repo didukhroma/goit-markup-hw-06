@@ -1149,20 +1149,43 @@ body {
   |============================
 */
 .portfolio {
-  padding-top: 96px;
+  padding: 48px 0;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    /* padding-top: 96px;
+   */
+    padding: 64px 0 96px;
+  }
 }
 /* FILTERS */
 .filters-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  max-width: 280px;
+
+  margin-bottom: 48px;
 }
-.filters-list-item:not(:last-child) {
-  margin-right: 24px;
+
+@media screen and (min-width: 768px) {
+  .filters-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 64px;
+    max-width: 100%;
+  }
 }
+@media screen and (min-width: 1158px) {
+  .filters-list {
+    margin-bottom: 72px;
+  }
+}
+
 .filters-button {
-  padding: 12px 24px;
-  min-width: 69px;
+  padding: 8px 16px;
+  /* padding: 12px 24px; */
+  min-width: 53px;
   min-height: 48px;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
@@ -1174,6 +1197,12 @@ body {
     background-color var(--transition-time) var(--transition-timing-function),
     box-shadow var(--transition-time) var(--transition-timing-function);
 }
+@media screen and (min-width: 768px) {
+  .filters-button {
+    padding: 12px 24px;
+  }
+}
+
 .filters-button:hover,
 .filters-button:focus {
   color: var(--white-color);
@@ -1183,10 +1212,25 @@ body {
 }
 /* ------------------------------------------------------------------------------------------------- */
 /* PROJECTS */
-.projects-list {
-  --items: 3;
-  --indent-row: 48px;
+@media screen and (min-width: 768px) {
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 }
+@media screen and (min-width: 1158px) {
+  .projects-list {
+    row-gap: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .projects-list-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+
 .projects-list-link {
   transition: box-shadow var(--transition-time)
     var(--transition-timing-function);
