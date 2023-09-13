@@ -232,11 +232,11 @@ body {
 
 @media screen and (max-width: 767px) {
   .menu__overlay {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 999;
     transform: translateX(100%);
     opacity: 0;
@@ -897,35 +897,52 @@ body {
   | FOOTER START
   |============================
 */
+
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--dark-color);
 }
-.footer-container {
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+}
+/* .footer-container {
   display: flex;
   align-items: baseline;
-}
+} */
 .footer-description-wrapper {
-  margin-right: 120px;
+  /* text-align: center; */
+  /* padding-left: 64px; */
+  /* margin-right: 120px; */
+  margin-bottom: 72px;
 }
 .footer-logo {
-  margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
+  /* text-align: center; */
+  margin-bottom: 17px;
+  /* margin-bottom: 16px; */
 }
 .footer-description {
+  margin: 0 auto;
   max-width: 264px;
   color: var(--light-color);
 }
 .footer-subtitle {
-  display: block;
+  text-align: center;
   margin-bottom: 16px;
   font-weight: 500;
 
   color: var(--white-color);
 }
 .footer-social-wrapper {
-  margin-right: 80px;
+  /* margin-right: 80px; */
+  margin-bottom: 72px;
 }
 .footer-social-list {
+  max-width: 208px;
+  margin: 0 auto;
   --indent-col: 16px;
   --indent-row: 16px;
   padding: 0;
@@ -954,7 +971,8 @@ body {
 
 .subscribe-form__input {
   padding: 8px 8px 8px 16px;
-  width: 264px;
+  /* width: 264px; */
+  margin-bottom: 16px;
 
   font-size: 12px;
   line-height: 1.5;
@@ -983,6 +1001,7 @@ body {
 
 .subscribe-form__button {
   padding: 8px 24px;
+  margin: 0 auto;
   min-width: 165px;
 
   color: var(--white-color);
