@@ -245,7 +245,9 @@ body {
     transition: opacity var(--transition-time) var(--transition-timing-function),
       visibility var(--transition-time) var(--transition-timing-function);
 
-    background-color: var(--modal-overlay-color);
+    /* background-color: var(--modal-overlay-color);
+     */
+    background-color: white;
   }
   .menu__overlay.is-open {
     /* transform: translateX(0); */
@@ -1094,7 +1096,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
-  width: 408px;
+  width: 392px;
   min-height: 584px;
   border-radius: 4px;
   background: #fcfcfc;
@@ -1103,6 +1105,11 @@ body {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
   transition: transform var(--transition-time) var(--transition-timing-function);
+}
+@media only screen and (min-width: 768px) {
+  .backdrop-wrapper {
+    width: 408px;
+  }
 }
 .backdrop-button {
   position: absolute;
